@@ -41,6 +41,7 @@ body{
 h1{
 display: block;
 margin-top: 5px;
+margin-bottom: 0px
 }
 .centerText{
 	margin-top: 10%;
