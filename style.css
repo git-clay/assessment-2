@@ -6,6 +6,9 @@
 body{
 	background-image: url('wood-background.jpg');
 }
+html{
+	height: 100%;
+}
 
 /*----------Text------------*/
 h1{
@@ -28,6 +31,12 @@ b{
 *{
 	color: white;
 	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	font-size: 32px;
 }
 
 /*----------Location/Layout------------*/
@@ -52,6 +61,13 @@ margin-bottom: 0px
 	margin: 0 auto;
 	display: block;
 }
+.footer{
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom:0;
+	text-align: center;
+}
 
 /*----------Image Appearance------------*/
 .player{
@@ -75,5 +91,9 @@ margin-bottom: 0px
 	border-radius: 10px;
 	font-size: 11px;
 	background-color: transparent;
+}
+.btn:hover{
+	background: white;
+	color: black;
 }
 
