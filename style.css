@@ -1,19 +1,78 @@
 /*mobile first*/
-@media(max-width: 650px:){
+@media(max-width: 400px){
 
 }
-/*------CLASS BASED STYLES--------*/
+/*------background--------*/
+body{
+	background-image: url('wood-background.jpg');
+}
 
 /*----------Text------------*/
 h1{
+font-weight: 100;
+font-size: 30px;
+}
+h2{
+font-size: 40px;
+font-weight: 700;
+margin-bottom: 0;
+}
+h3{
+font-size: 17px;
+margin-top: 5px;
+}
+b{
+	font-weight: 900;
+}
 
+*{
+	color: white;
+	text-align: center;
 }
 
 /*----------Location/Layout------------*/
+body{
+	width: 100%;
+}
+.header{
+	margin: 0 auto;
+	height:28px;
+}
+h1{
+display: block;
+margin-top: 5px;
+}
+.centerText{
+	margin-top: 10%;
+}
 
+
+.buttons{
+	margin: 0 auto;
+	display: block;
+}
 
 /*----------Image Appearance------------*/
-
+.player{
+	width: 75px;
+	height: 75px;
+	border: 2px solid black;
+	margin: 10px;
+}
 
 
 /*----------Buttons------------*/
+
+.buttonWrap{
+	margin-top:10%;
+}
+.btn{
+	width: 150px;
+	display: block;
+	margin: 10px auto;
+	border: 2.5px solid white;
+	border-radius: 10px;
+	font-size: 11px;
+	background-color: transparent;
+}
+

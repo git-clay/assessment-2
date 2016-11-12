@@ -2,14 +2,28 @@
 <html>
 <head>
 	<title>Landing Page</title>
+	<!--link rel="stylesheet" type="text/css" href="reset.css"-->
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Racer!</h1>
+<section class="topBar">
+	<div class="header">
+		<h1><b>JAVA</b>Racer!</h1>
+	</div>
+</section>
+	<hr>
+	<div class="centerText">
+		<h2>The game with infinite possibilities!</h2>
+		<h3>by infinite we mean moving two players in one direction...</h3>
+	</div>
 
-	<button class="btn"><a href="game.html">START</a></button>
-	<button class="btn"><a href="https://github.com/git-clay/assessment-2">GitHub</a></button>
-	<button class="btn"><a href="https://www.khanacademy.org/">KHAN Academy</a></button>
+	<div class="buttonWrap">
+		<p>Hit start below to begin!</p>
+
+		<button class="btn" onclick="location.href='game.html'" type="button">START</button>
+		<button class="btn" onclick="location.href='https://github.com/git-clay/assessment-2'" type="button">GitHub</button>
+		<button class="btn" onclick="location.href='https://www.khanacademy.org/'" type="button">KHAN Academy</button>
+	</div>
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
