@@ -90,16 +90,16 @@ section div{
 	height: 75px;
 	border: 2px solid white;
 	margin: 30px;
-	left:0;
-	top:0px;
-	position: relative;
 	z-index: 100px;
 }
 #player1{
 	background: red;
+	/*left:100px;*/
+	position: relative;
 }
 #player2{
 	background: blue;
+	position: relative;
 }
 
 /*----------Buttons------------*/
