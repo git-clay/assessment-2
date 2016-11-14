@@ -9,12 +9,12 @@ var win = false;
 /*----------------create article/section/aside for divs to go into??--------------------*/
 function Player(tag,positionY,positionX,id){
 	this.tag= document.createElement(tag);		//makes div
-	this.tag.innerHTML = id;					//Writes name onto character
+	//this.tag.innerHTML = id;					//Writes name onto character
 	section.append(this.tag);					//div into body
 	this.positionY=positionY;									//vertical position on section
 	this.tag.id= id;							//places id into div tag
 	this.positionX = positionX;						//current x position (start>>>end)
-	onBoard(this);								//work on streamlining....
+	//onBoard(this);								//work on positionY...
 }
 var player1 = new Player("div",2,start,"player1");
 var player2 = new Player("div",24,start,"player2");
@@ -27,14 +27,12 @@ function onBoard(player){
 }
 
 /*________________________Functions to move players_________________*/
-Player.prototype.draw = function(object){
-	object.fillRect(this.positionX,this.positionY, 75,75);
-};
+
 Player.prototype.move =function(player){				///function to moves player
 	var currentID = document.getElementById(player.tag.id);
-	console.log(player.positionX);
+	console.log(player.positionY);
 	currentID.setAttribute("style","left:"+player.positionX+"px"); //changes X position!
-	player.positionX +=15;
+	player.positionX +=20;
 
 };
 document.addEventListener('keydown', function(event){		//calls move function when key is pressed
@@ -42,12 +40,18 @@ document.addEventListener('keydown', function(event){		//calls move function whe
 		case 90: //z
 			player1.move(player1);
 				console.log("player 1 moved to "+player1.positionX);
-
+					
 		break;
 		case 77: //m
 			player2.move(player2);
 				console.log("player 2 moved to "+player2.positionX);
 		break;
+	}
+	if (player1.positionX >end){
+	alert('Player 1 wins!');
+	}
+	else if(player2.positionX >end){
+	alert('Player 2 wins!');
 	}
 });
 
@@ -56,20 +60,7 @@ document.addEventListener('keydown', function(event){		//calls move function whe
 //console.log(player1); 
 
 
-/* while loop (while win==false....) */
-/*
-while (win===false){
-	document.addEventListener('keyCode=122',hey);
-	if (player1.positionX >end){
-	alert('Player 1 wins!');
-	break;
-	}
-	else if(player2.positionX >end){
-	alert('Player 2 wins!');
-	break;
-	}
-}
-*/
+
 /*Reset button*/
 function reset(){
 	location.reload();

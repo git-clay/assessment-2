@@ -79,26 +79,25 @@ margin-bottom: 0px
 /*----------Image Appearance------------*/
 section{
 	margin-top: 35px;
-	background: black;
 	width: 100%;
 	height: 75%;
 	position: absolute;
 	z-index: -1;
 }
 section div{
-	width: 75px;
-	height: 75px;
-	border: 2px solid white;
-	margin: 30px;
+	width: 100px;
+	height: 100px;
+	margin: 40px;
 	z-index: 100px;
 }
 #player1{
-	background: red;
-	/*left:100px;*/
+	background-image: url('ant-java-red.png');
+	background-repeat: no-repeat;
 	position: relative;
 }
 #player2{
-	background: blue;
+	background-image: url('ant-java-blue.png');
+	background-repeat: no-repeat;
 	position: relative;
 }
 
