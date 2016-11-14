@@ -8,14 +8,15 @@ var win = false;
 var currentWins=0;
 var p1counter =parseInt(sessionStorage.getItem('p1wins'));
 var p2counter =parseInt(sessionStorage.getItem('p2wins'));
-/*
+
+
 if (p1counter>0){
-	document.
+	section.append('Player 1: '+ p1counter);
 }
 if (p2counter>0){
-
+	section.append('  '+' Player 2: '+ p2counter);
 }
-*/
+
 
 
 /*----------------create article/section/aside for divs to go into??--------------------*/
