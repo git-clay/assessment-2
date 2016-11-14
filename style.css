@@ -7,6 +7,7 @@ body{
 	background-image: url('wood-background.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	font-family: 'Amatic SC', cursive,serif;
 }
 html{
 	height: 100%;
@@ -15,21 +16,23 @@ html{
 /*----------Text------------*/
 h1{
 font-weight: 100;
-font-size: 30px;
+font-size: 35px;
 }
 h2{
-font-size: 40px;
+font-size: 45px;
 font-weight: 700;
 margin-bottom: 0;
 }
 h3{
-font-size: 17px;
+font-size: 19px;
 margin-top: 5px;
 }
 b{
 	font-weight: 900;
 }
-
+p{
+	font-size: 20px;
+}
 *{
 	color: white;
 	text-align: center;
@@ -47,11 +50,11 @@ body{
 }
 .header{
 	margin: 0 auto;
-	height:28px;
+	height:33px;
 }
 h1{
 display: block;
-margin-top: 5px;
+margin-top: 1px;
 margin-bottom: 0px
 }
 .centerText{
@@ -114,6 +117,9 @@ section div{
 	border-radius: 10px;
 	font-size: 11px;
 	background-color: transparent;
+	font-family: 'Amatic SC', cursive;
+	font-size: 19px;
+	font-weight: 700;
 }
 .btn:hover{
 	background: white;

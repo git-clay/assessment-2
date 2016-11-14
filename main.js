@@ -1,10 +1,22 @@
 //Your game page must have at least two player objects
 //Your game must have a clear win condition
 var start = 0;
-var end = 350;
+var end = 400;
 //var body = document.querySelector('body');
 var section = document.querySelector('section');
 var win = false;
+var currentWins=0;
+var p1counter =parseInt(sessionStorage.getItem('p1wins'));
+var p2counter =parseInt(sessionStorage.getItem('p2wins'));
+/*
+if (p1counter>0){
+	document.
+}
+if (p2counter>0){
+
+}
+*/
+
 
 /*----------------create article/section/aside for divs to go into??--------------------*/
 function Player(tag,positionY,positionX,id){
@@ -30,7 +42,7 @@ function onBoard(player){
 
 Player.prototype.move =function(player){				///function to moves player
 	var currentID = document.getElementById(player.tag.id);
-	console.log(player.positionY);
+	//console.log(player.positionY);
 	currentID.setAttribute("style","left:"+player.positionX+"px"); //changes X position!
 	player.positionX +=20;
 
@@ -48,10 +60,30 @@ document.addEventListener('keydown', function(event){		//calls move function whe
 		break;
 	}
 	if (player1.positionX >end){
-	alert('Player 1 wins!');
+		alert('Player 1 wins!');
+		if(isNaN(parseInt(sessionStorage.getItem('p1wins')))===true){
+		sessionStorage.setItem('p1wins', '1');
+		}
+		else{
+		currentWins=parseInt(sessionStorage.getItem('p1wins'));
+		currentWins++;
+		currentWins.toString();
+		console.log(currentWins);
+		sessionStorage.setItem('p1wins', currentWins);
 	}
+}
 	else if(player2.positionX >end){
-	alert('Player 2 wins!');
+		alert('Player 2 wins!');
+		if(isNaN(parseInt(sessionStorage.getItem('p2wins')))===true){
+		sessionStorage.setItem('p2wins', '1');
+		}
+		else{
+		currentWins=parseInt(sessionStorage.getItem('p2wins'));
+		currentWins++;
+		currentWins.toString();
+		console.log(currentWins);
+		sessionStorage.setItem('p2wins', currentWins);
+	}	
 	}
 });
 
