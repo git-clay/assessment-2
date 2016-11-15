@@ -1,6 +1,6 @@
 //Your game page must have at least two player objects
 //Your game must have a clear win condition
-var start = 0;
+var start = 20;
 var end = 400;
 //var body = document.querySelector('body');
 var section = document.querySelector('section');
@@ -28,6 +28,7 @@ function Player(tag,positionY,positionX,id){
 	this.tag.id= id;							//places id into div tag
 	this.positionX = positionX;						//current x position (start>>>end)
 	//onBoard(this);								//work on positionY...
+//	console.log(this);
 }
 var player1 = new Player("div",2,start,"player1");
 var player2 = new Player("div",24,start,"player2");
@@ -43,8 +44,8 @@ function onBoard(player){
 
 Player.prototype.move =function(player){				///function to moves player
 	var currentID = document.getElementById(player.tag.id);
-	//console.log(player.positionY);
-	currentID.setAttribute("style","left:"+player.positionX+"px"); //changes X position!
+	console.log(currentID);
+currentID.setAttribute("style","left:"+player.positionX+"px"); //changes X position!
 	player.positionX +=20;
 
 };
@@ -55,7 +56,7 @@ document.addEventListener('keydown', function(event){		//calls move function whe
 				console.log("player 1 moved to "+player1.positionX);
 					
 		break;
-		case 77: //m
+		case 39: //m
 			player2.move(player2);
 				console.log("player 2 moved to "+player2.positionX);
 		break;
